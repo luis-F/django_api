@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  django:
+    depends_on:
+      - db
+    build: .
+    image: django
+    container_name: django_api
+    working_dir: /api
+    volumes:
+      - .:/api
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 8000:8000
+  db:
+    image: postgres
+    container_name: postgres_django
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=your_user
+      - POSTGRES_PASSWORD=your_password
+      - POSTGRES_DB=your_db
+
+volumes:
+  postgres_data:
