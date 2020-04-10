@@ -5,7 +5,7 @@ $ docker-compose build
 
 ### Entrar no docker
 ```sh
-$ docker-compose run django /bin/sh
+$ docker-compose run django bash
 ```
 
 ### Dentro do docker
@@ -18,6 +18,9 @@ $ python manage.py migrate
 
 # Criar superuser para gerenciamento
 $ python manage.py createsuperuser
+
+# Adiciona dados iniciais no banco
+$ python manage.py loaddata stocks
 ```
 
 ### Testar funcionamento
