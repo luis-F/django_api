@@ -1,10 +1,15 @@
 from django.contrib import admin
-from django.urls import path
-from django.conf.urls import url, include
+from django.urls import path, include
+from rest_framework import routers
 
-from api import endpoints
+from daily_historical.views import DailyHistoricalView
+from stock.views import StockView
+
+router = routers.DefaultRouter()
+router.register('daily_historical', DailyHistoricalView)
+router.register('stock', StockView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('^api/', include(endpoints)),
+    path('', include(router.urls))
 ]
