@@ -5,7 +5,7 @@ $ docker-compose build
 
 ### Entrar no docker
 ```sh
-$ docker-compose run django bash
+$ docker-compose run django /bin/sh
 ```
 
 ### Dentro do docker
