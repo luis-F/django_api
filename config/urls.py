@@ -5,7 +5,7 @@ from rest_framework import routers
 from daily_historical.views import DailyHistoricalView
 from stock.views import StockView
 
-router = routers.DefaultRouter()
+router = routers.DefaultRouter(trailing_slash=False)
 router.register('daily_historical', DailyHistoricalView)
 router.register('stock', StockView)
 
