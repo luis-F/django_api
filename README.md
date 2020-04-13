@@ -18,6 +18,12 @@ $ python manage.py migrate
 
 # Criar superuser para gerenciamento
 $ python manage.py createsuperuser
+
+# Adiciona dados iniciais no banco
+$ python manage.py loaddata stocks
+
+# Para rodar o linter
+$ pylint --load-plugins pylint_django ./stock ./config/ ./daily_historical/
 ```
 
 ### Testar funcionamento

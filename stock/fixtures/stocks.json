@@ -1,0 +1,9 @@
+[
+  {
+    "model": "stock.stock",
+    "pk": 1,
+    "fields": {
+      "symbol": "PETR4.SA"
+    }
+  }
+]
