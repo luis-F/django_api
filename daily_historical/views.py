@@ -26,10 +26,10 @@ class DailyHistoricalView(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         is_many = isinstance(request.data, list)
         if not is_many:
-            return super(BookViewSet, self).create(request, *args, **kwargs)
+            return super(DailyHistoricalView, self).create(request, *args, **kwargs)
         else:
             serializer = self.get_serializer(
-                validate_data=request.data,
+                data=request.data,
                 many=True
             )
             serializer.is_valid(raise_exception=True)
