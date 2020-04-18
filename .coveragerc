@@ -1,0 +1,9 @@
+[run]
+source = .
+branch = True
+omit = config/*, manage.py, stock/apps.py, daily_historical/apps.py
+
+[report]
+fail_under = 100
+show_missing = True
+skip_covered = True

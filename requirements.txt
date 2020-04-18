@@ -5,3 +5,4 @@ django-cors-headers==3.2.1
 pylint-django==2.0.14
 # astroid==2.0.4
 # pylint==2.1.1
+coverage==5.1
