@@ -15,7 +15,7 @@ class StockTest(APITestCase):
         self.stock.delete()
 
     def test_get_symbol(self):
-        self.assertEqual(self.stock.__str__(), self.stock.symbol)
+        self.assertEqual(self.stock.symbol, 'PETR4.SA')
 
     def test_get_stock(self):
         response = self.client.get('/stock')
